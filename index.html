@@ -3,183 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficial de Cartório | Serviços Extrajudiciais</title>
+    <title>Bruno | Oficial do 11º Registro de Imóveis de SP</title>
     <style>
-        /* Estilos Gerais */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+        :root {
+            --azul-institucional: #0a2540;
+            --dourado-suave: #c1a35f;
+            --cinza-fundo: #f8f9fa;
+            --texto: #333;
         }
 
-        /* Cabeçalho */
+        body {
+            font-family: 'Georgia', serif; /* Fonte mais clássica e jurídica */
+            margin: 0;
+            padding: 0;
+            color: var(--texto);
+            background-color: var(--cinza-fundo);
+        }
+
         header {
-            background-color: #1a2a6c; /* Azul Marinho Profissional */
+            background-color: var(--azul-institucional);
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 1rem;
             text-align: center;
-            border-bottom: 4px solid #b8971f; /* Detalhe em Dourado */
+            border-bottom: 5px solid var(--dourado-suave);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 2.2rem;
+            font-weight: normal;
         }
 
         header p {
-            margin: 10px 0 0;
-            font-style: italic;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            color: var(--dourado-suave);
         }
 
-        /* Navegação */
-        nav {
-            background: #fff;
-            text-align: center;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #1a2a6c;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #b8971f;
-        }
-
-        /* Seções */
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 900px;
+            margin: -30px auto 40px;
             background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        section {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         h2 {
-            color: #1a2a6c;
-            border-left: 5px solid #b8971f;
-            padding-left: 10px;
+            color: var(--azul-institucional);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
         }
 
-        /* Grade de Serviços */
-        .servicos {
+        .intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .grid-servicos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-top: 20px;
         }
 
-        .card {
-            background: #f9f9f9;
+        .servico-item {
             padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            text-align: center;
+            border: 1px solid #eee;
+            border-left: 4px solid var(--azul-institucional);
         }
 
-        .card h3 {
-            color: #b8971f;
-            margin-top: 0;
+        .servico-item strong {
+            display: block;
+            color: var(--azul-institucional);
+            margin-bottom: 5px;
         }
 
-        /* Rodapé */
+        .info-contato {
+            background: #f0f2f5;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
         footer {
-            background: #1a2a6c;
-            color: white;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
         }
 
-        /* Botão de Contato */
-        .btn-contato {
-            display: inline-block;
-            background: #b8971f;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .btn-contato:hover {
-            background: #967a19;
+        @media (max-width: 600px) {
+            .grid-servicos { grid-template-columns: 1fr; }
+            .container { margin: 10px; padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Nome do Oficial</h1>
-        <p>Oficial de Registro e Tabelião | Fé Pública e Segurança Jurídica</p>
-    </header>
+<header>
+    <h1>Bruno</h1>
+    <p>Oficial de Registro de Imóveis</p>
+    <small>11ª Zona da Comarca de São Paulo - SP</small>
+</header>
 
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-    </nav>
+<div class="container">
+    <section class="intro">
+        <h2>Apresentação Institucional</h2>
+        <p>
+            Como Oficial do <strong>11º Registro de Imóveis da Capital de São Paulo</strong>, nossa missão é garantir a segurança jurídica, a publicidade e a eficácia dos atos jurídicos relativos a bens imóveis. Atuamos sob a égide da Lei 6.015/73, zelando pela integridade do fólio real e pela proteção do direito de propriedade dos cidadãos e empresas da nossa circunscrição.
+        </p>
+    </section>
 
-    <div class="container">
-        
-        <section id="sobre">
-            <h2>Sobre a Profissão</h2>
-            <p>O <strong>Oficial de Cartório</strong> exerce uma função delegada pelo Poder Público, atuando na prevenção de litígios e na garantia da autenticidade, segurança e eficácia dos atos jurídicos. Nossa missão é conferir fé pública aos documentos e garantir que os direitos dos cidadãos sejam registrados com ética e rigor legal.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Principais Serviços</h2>
-            <div class="servicos">
-                <div class="card">
-                    <h3>Atas Notariais</h3>
-                    <p>Formalização de fatos presenciados para fins de prova jurídica.</p>
-                </div>
-                <div class="card">
-                    <h3>Escrituras Públicas</h3>
-                    <p>Compra e venda, doações, inventários e divórcios extrajudiciais.</p>
-                </div>
-                <div class="card">
-                    <h3>Autenticações</h3>
-                    <p>Reconhecimento de firmas e autenticação de cópias com segurança.</p>
-                </div>
-                <div class="card">
-                    <h3>Registros</h3>
-                    <p>Garantia de publicidade e oponibilidade perante terceiros.</p>
-                </div>
+    <section>
+        <h2>Competências e Atos</h2>
+        <div class="grid-servicos">
+            <div class="servico-item">
+                <strong>Registros de Propriedade</strong>
+                Compra e venda, doações, permutas e sucessões.
             </div>
-        </section>
+            <div class="servico-item">
+                <strong>Garantias Reais</strong>
+                Alienação fiduciária, hipotecas e penhoras.
+            </div>
+            <div class="servico-item">
+                <strong>Averbações</strong>
+                Alterações de estado civil, cancelamentos e edificações.
+            </div>
+            <div class="servico-item">
+                <strong>Certidões</strong>
+                Emissão de certidões de matrícula e negativa de ônus.
+            </div>
+        </div>
+    </section>
 
-        <section id="contato">
-            <h2>Localização e Atendimento</h2>
-            <p><strong>Endereço:</strong> Rua Principal, 123 - Centro, Cidade/UF</p>
-            <p><strong>Horário:</strong> Segunda a Sexta, das 09h às 17h</p>
-            <p><strong>Telefone:</strong> (11) 0000-0000</p>
-            <br>
-            <a href="mailto:contato@exemplo.com.br" class="btn-contato">Enviar E-mail</a>
-        </section>
+    <section id="contato">
+        <h2>Atendimento</h2>
+        <div class="info-contato">
+            <p><strong>Circunscrição:</strong> 11º Registro de Imóveis de São Paulo</p>
+            <p><strong>Endereço:</strong> [Insira o Endereço Atualizado aqui], São Paulo - SP</p>
+            <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, das 09h às 16h</p>
+            <p><strong>Portal Eletrônico:</strong> <a href="https://www.registradores.onr.org.br/" target="_blank" style="color: var(--azul-institucional);">SAEC - Registradores</a></p>
+        </div>
+    </section>
+</div>
 
-    </div>
-
-    <footer>
-        <p>&copy; 2024 - Todos os direitos reservados | Oficial de Cartório</p>
-    </footer>
+<footer>
+    &copy; 2026 Bruno - Oficial de Registro de Imóveis. 
+    <br>Desenvolvido com foco na transparência e segurança jurídica.
+</footer>
 
 </body>
-</html>r 
+</html>
