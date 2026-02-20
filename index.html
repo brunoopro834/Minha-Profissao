@@ -3,124 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carreira Jurídica: Oficial de Cartório</title>
+    <title>Oficial de Cartório | Excelência Jurídica</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="overlay">
-            <h1>Oficial de Cartório</h1>
-            <p>Excelência e Fé Pública no Direito Notarial</p>
+    <div id="loader"></div>
+
+    <header class="main-header">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <span class="badge">Carreiras de Estado</span>
+                <h1>Oficial de Cartório</h1>
+                <p>A Fé Pública e a Estabilidade das Relações Jurídicas no Brasil</p>
+                <div class="header-buttons">
+                    <a href="#sobre" class="btn-gold">Conhecer Carreira</a>
+                    <button onclick="abrirModal('concurso')" class="btn-outline">Simular Concurso</button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre a Profissão</a></li>
-            <li><a href="#salarios">Remuneração</a></li>
-            <li><a href="#enem">Ingresso e ENEM</a></li>
-            <li><a href="#contato">Ações</a></li>
-        </ul>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">PORTAL<span>JURÍDICO</span></div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#financas">Finanças</a></li>
+                <li><a href="#enem">ENEM & Ingresso</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main class="container">
-        
-        <section id="sobre">
-            <h2>O que faz um Oficial de Cartório?</h2>
-            <p>O Oficial de Cartório (ou Tabelião/Registrador) é o profissional que detém a <strong>fé pública</strong> delegada pelo Estado. Sua missão é garantir a segurança jurídica, a autenticidade e a eficácia dos atos jurídicos.</p>
-            <div class="info-cards">
-                <div class="card">
-                    <h3>Atribuições</h3>
-                    <ul>
-                        <li>Lavrar escrituras e testamentos.</li>
-                        <li>Registrar nascimentos, casamentos e óbitos.</li>
-                        <li>Autenticar documentos e reconhecer firmas.</li>
-                        <li>Gerir registros de imóveis e protestos.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Requisitos</h3>
-                    <ul>
-                        <li>Bacharelado em Direito.</li>
-                        <li>Aprovação em Concurso Público de Provas e Títulos.</li>
-                        <li>Nacionalidade brasileira e idoneidade moral.</li>
-                    </ul>
+    <main>
+        <section id="sobre" class="section-padding">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="reveal-left">
+                        <h2>A Nobreza da Função Notarial</h2>
+                        <p>O Oficial de Cartório é o guardião da verdade jurídica. Em 2026, sua atuação é o pilar da <strong>Extrajudicialização</strong>, permitindo que inventários, divórcios e usucapião sejam resolvidos com agilidade sem sobrecarregar o Judiciário.</p>
+                        <ul class="juridico-list">
+                            <li>Delegação do Poder Público (Art. 236 da CF/88)</li>
+                            <li>Independência Funcional e Fé Pública</li>
+                            <li>Responsabilidade Civil e Criminal</li>
+                        </ul>
+                    </div>
+                    <div class="image-box">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/13248712962059422240_0" alt="Balança da Justiça e Direito">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <hr>
-
-        <section id="salarios">
-            <h2>Remuneração e Mercado</h2>
-            <p>A carreira de titular de cartório é considerada uma das mais rentáveis do país, embora os rendimentos variem drasticamente de acordo com a arrecadação da serventia.</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Categoria</th>
-                        <th>Estimativa Mensal (Média)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Média Salarial Brasileira (Geral)</td>
-                        <td>R$ 3.222,00</td>
-                    </tr>
-                    <tr>
-                        <td>Escrevente de Cartório</td>
-                        <td>R$ 3.500,00 - R$ 6.000,00</td>
-                    </tr>
-                    <tr>
-                        <td>Titular de Cartório (Renda Mínima)</td>
-                        <td>R$ 10.000,00 - R$ 30.000,00</td>
-                    </tr>
-                    <tr>
-                        <td>Titulares de Grandes Serventias</td>
-                        <td>R$ 100.000,00+</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><small>*Valores baseados em dados de 2024-2026. Titulares recebem emolumentos, não salário fixo do governo.</small></p>
-        </section>
-
-        <hr>
-
-        <section id="enem">
-            <h2>Nota de Corte (Direito)</h2>
-            <p>Para se tornar Oficial, o primeiro passo é a graduação em Direito. Confira as médias de corte do ENEM/SiSU:</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="number">735</span>
-                    <span class="label">Média Nacional</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">810</span>
-                    <span class="label">Universidades de Elite (Ex: USP, UFRJ)</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">670</span>
-                    <span class="label">Menores Notas (Interior/ProUni)</span>
+        <section id="financas" class="dark-section">
+            <div class="container">
+                <h2 class="center gold-text">Projeção de Rendimentos 2026</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cargo / Referência</th>
+                                <th>Rendimento Mensal Estimado</th>
+                                <th>Comparativo Nacional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Média Salarial Brasileira</td>
+                                <td>R$ 3.540,00</td>
+                                <td class="low">Base</td>
+                            </tr>
+                            <tr>
+                                <td>Escrevente Substituto</td>
+                                <td>R$ 6.800,00</td>
+                                <td class="mid">2x Média</td>
+                            </tr>
+                            <tr>
+                                <td>Oficial (Entrância Inicial)</td>
+                                <td>R$ 22.400,00</td>
+                                <td class="high">6x Média</td>
+                            </tr>
+                            <tr>
+                                <td>Oficial (Entrância Final/Capital)</td>
+                                <td>R$ 115.000,00+</td>
+                                <td class="ultra">Topo da Pirâmide</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="actions">
-            <h2>Ferramentas de Apoio</h2>
-            <div class="button-group">
-                <button onclick="showAlert('simular')">Simular Nota de Corte</button>
-                <button onclick="showAlert('editais')">Ver Editais Abertos</button>
-                <button onclick="window.open('https://www.cnj.jus.br', '_blank')">Portal do CNJ</button>
+        <section id="enem" class="section-padding">
+            <div class="container center">
+                <h2>O Caminho da Aprovação</h2>
+                <p>O ingresso na carreira exige o Bacharelado em Direito. Confira as notas de corte atuais para as melhores faculdades do país:</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="icon">⚖️</div>
+                        <h3>Média ENEM (Sisu)</h3>
+                        <p class="number">758</p>
+                        <span>Nota Mínima Recomendada</span>
+                    </div>
+                    <div class="stat-card highlight">
+                        <div class="icon">🏛️</div>
+                        <h3>Top Universidades</h3>
+                        <p class="number">815</p>
+                        <span>USP, UFRJ, UFMG</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">📚</div>
+                        <h3>Anos de Estudo</h3>
+                        <p class="number">3-5</p>
+                        <span>Foco em Concursos Públicos</span>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section id="ferramentas" class="cta-section">
+            <div class="container center">
+                <h2 class="gold-text">Painel de Controle do Candidato</h2>
+                <div class="btn-group">
+                    <button onclick="calcularEmolumentos()" class="main-btn">Calculadora de Emolumentos</button>
+                    <button onclick="abrirModal('vagas')" class="main-btn">Vagas Abertas (CNS)</button>
+                    <button onclick="window.location.href='https://www.cnj.jus.br'" class="main-btn outline">Acesso ao CNJ</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Guia da Carreira Jurídica. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2026 Observatório do Direito Notarial. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
