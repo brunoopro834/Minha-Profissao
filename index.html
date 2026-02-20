@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficial de Cartório | Excelência Jurídica</title>
+    <title>Portal do Oficial de Cartório | Excelência Jurídica</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="loader"></div>
-
     <header class="main-header">
         <div class="hero-overlay">
             <div class="hero-text">
-                <span class="badge">Carreiras de Estado</span>
+                <span class="badge">Carreiras de Estado 2026</span>
                 <h1>Oficial de Cartório</h1>
                 <p>A Fé Pública e a Estabilidade das Relações Jurídicas no Brasil</p>
                 <div class="header-buttons">
-                    <a href="#sobre" class="btn-gold">Conhecer Carreira</a>
+                    <a href="#especialidades" class="btn-gold">Explorar Serventias</a>
                     <button onclick="abrirModal('concurso')" class="btn-outline">Simular Concurso</button>
                 </div>
             </div>
@@ -29,29 +27,69 @@
         <div class="nav-container">
             <div class="logo">PORTAL<span>JURÍDICO</span></div>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#financas">Finanças</a></li>
-                <li><a href="#enem">ENEM & Ingresso</a></li>
-                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#especialidades">Cartórios</a></li>
+                <li><a href="#imoveis">Registro de Imóveis</a></li>
+                <li><a href="#financas">Salários</a></li>
+                <li><a href="#enem">ENEM</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <section id="sobre" class="section-padding">
+        <section id="especialidades" class="section-padding">
             <div class="container">
-                <div class="grid-2">
-                    <div class="reveal-left">
-                        <h2>A Nobreza da Função Notarial</h2>
-                        <p>O Oficial de Cartório é o guardião da verdade jurídica. Em 2026, sua atuação é o pilar da <strong>Extrajudicialização</strong>, permitindo que inventários, divórcios e usucapião sejam resolvidos com agilidade sem sobrecarregar o Judiciário.</p>
-                        <ul class="juridico-list">
-                            <li>Delegação do Poder Público (Art. 236 da CF/88)</li>
-                            <li>Independência Funcional e Fé Pública</li>
-                            <li>Responsabilidade Civil e Criminal</li>
-                        </ul>
+                <h2 class="center">O Ecossistema Extrajudicial</h2>
+                <div class="grid-cartorios">
+                    <div class="cartorio-card">
+                        <div class="card-icon">👤</div>
+                        <h3>Civil (RCPN)</h3>
+                        <p>Nascimento, casamento e óbito. O registro da dignidade humana.</p>
                     </div>
-                    <div class="image-box">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/13248712962059422240_0" alt="Balança da Justiça e Direito">
+                    <div class="cartorio-card">
+                        <div class="card-icon">✒️</div>
+                        <h3>Notas</h3>
+                        <p>Escrituras e testamentos. A vontade das partes com força de lei.</p>
+                    </div>
+                    <div class="cartorio-card">
+                        <div class="card-icon">📉</div>
+                        <h3>Protesto</h3>
+                        <p>Recuperação de crédito e prova pública de inadimplência.</p>
+                    </div>
+                    <div class="cartorio-card">
+                        <div class="card-icon">📂</div>
+                        <h3>RTD-PJ</h3>
+                        <p>Registro de documentos e nascimento de associações e ONGs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="imoveis" class="ri-exclusive-container">
+            <div class="ri-badge">Especialidade Master</div>
+            <div class="container ri-content-grid">
+                <div class="ri-text">
+                    <h2>Registro de Imóveis (RI)</h2>
+                    <p>O RI é o pilar econômico do país. Rege-se pelo princípio: <strong>"Quem não registra, não é dono"</strong>. É a serventia que garante a propriedade privada e a segurança do mercado imobiliário.</p>
+                    <div class="ri-details">
+                        <div class="detail-item">
+                            <h4>Continuidade</h4>
+                            <p>Corrente ininterrupta de registros.</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Prioridade</h4>
+                            <p>O primeiro a protocolar tem a preferência.</p>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('ri-detalhes')" class="btn-gold-full" style="margin-top: 20px;">Ver Fluxo de Registro</button>
+                </div>
+                <div class="ri-visual">
+                    <div class="legal-scroll">
+                        <h3>Matrícula Digital</h3>
+                        <div class="scroll-content">
+                            <span>R-1/12.405: Compra e Venda</span><br>
+                            <span>AV-2/12.405: Habite-se</span><br>
+                            <span>R-3/12.405: Alienação Fiduciária</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,87 +97,41 @@
 
         <section id="financas" class="dark-section">
             <div class="container">
-                <h2 class="center gold-text">Projeção de Rendimentos 2026</h2>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Cargo / Referência</th>
-                                <th>Rendimento Mensal Estimado</th>
-                                <th>Comparativo Nacional</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Média Salarial Brasileira</td>
-                                <td>R$ 3.540,00</td>
-                                <td class="low">Base</td>
-                            </tr>
-                            <tr>
-                                <td>Escrevente Substituto</td>
-                                <td>R$ 6.800,00</td>
-                                <td class="mid">2x Média</td>
-                            </tr>
-                            <tr>
-                                <td>Oficial (Entrância Inicial)</td>
-                                <td>R$ 22.400,00</td>
-                                <td class="high">6x Média</td>
-                            </tr>
-                            <tr>
-                                <td>Oficial (Entrância Final/Capital)</td>
-                                <td>R$ 115.000,00+</td>
-                                <td class="ultra">Topo da Pirâmide</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <h2 class="center gold-text">Projeção Salarial 2026</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cargo</th>
+                            <th>Rendimento Mensal</th>
+                            <th>Média BR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Média Brasileira (Geral)</td>
+                            <td>R$ 3.540,00</td>
+                            <td>1x</td>
+                        </tr>
+                        <tr>
+                            <td>Oficial de Imóveis (Entrância Final)</td>
+                            <td>R$ 115.000,00+</td>
+                            <td>32x</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <section id="enem" class="section-padding">
-            <div class="container center">
-                <h2>O Caminho da Aprovação</h2>
-                <p>O ingresso na carreira exige o Bacharelado em Direito. Confira as notas de corte atuais para as melhores faculdades do país:</p>
+        <section id="enem" class="section-padding center">
+            <div class="container">
+                <h2>Nota de Corte (Direito)</h2>
                 <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="icon">⚖️</div>
-                        <h3>Média ENEM (Sisu)</h3>
-                        <p class="number">758</p>
-                        <span>Nota Mínima Recomendada</span>
-                    </div>
-                    <div class="stat-card highlight">
-                        <div class="icon">🏛️</div>
-                        <h3>Top Universidades</h3>
-                        <p class="number">815</p>
-                        <span>USP, UFRJ, UFMG</span>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon">📚</div>
-                        <h3>Anos de Estudo</h3>
-                        <p class="number">3-5</p>
-                        <span>Foco em Concursos Públicos</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="ferramentas" class="cta-section">
-            <div class="container center">
-                <h2 class="gold-text">Painel de Controle do Candidato</h2>
-                <div class="btn-group">
-                    <button onclick="calcularEmolumentos()" class="main-btn">Calculadora de Emolumentos</button>
-                    <button onclick="abrirModal('vagas')" class="main-btn">Vagas Abertas (CNS)</button>
-                    <button onclick="window.location.href='https://www.cnj.jus.br'" class="main-btn outline">Acesso ao CNJ</button>
+                    <div class="stat-card"><h3>ENEM Mínimo</h3><p class="number">758</p></div>
+                    <div class="stat-card highlight"><h3>Top (USP/UFRJ)</h3><p class="number">815</p></div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Observatório do Direito Notarial. Todos os direitos reservados.</p>
-        </div>
-    </footer>
 
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -147,6 +139,10 @@
             <div id="modal-body"></div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Portal Jurídico Notarial</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
