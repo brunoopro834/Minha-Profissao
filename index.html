@@ -1,34 +1,708 @@
-<!-- Seção de Contato -->
-<section id="contato" class="section-padding">
-    <div class="container">
-        <div class="grid-2">
-            <div class="reveal-left">
-                <h2 class="gold-text">Fale Conosco</h2>
-                <p>Tire suas dúvidas sobre a carreira de Oficial de Cartório, peça mais informações ou envie sugestões para o portal.</p>
-                <div class="contact-info">
-                    <p><strong>📧 Email:</strong> contato@portaljuridico.com</p>
-                    <p><strong>📞 Telefone:</strong> (11) 1234-5678</p>
-                    <p><strong>🕒 Horário de Atendimento:</strong> Seg a Sex, 9h às 18h</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficial de Cartório | Excelência Jurídica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0a1128;
+            --navy-light: #1c2541;
+            --gold: #c5a059;
+            --gold-hover: #e0b973;
+            --white: #fefefe;
+            --grey: #a5a5a5;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--navy-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Hero */
+        .main-header {
+            height: 100vh;
+            background: url('http://googleusercontent.com/image_collection/image_retrieval/13248712962059422240_0') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(10, 17, 40, 0.9), rgba(10, 17, 40, 0.4));
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4.5rem;
+            color: var(--gold);
+            margin: 15px 0;
+        }
+
+        .hero-text p {
+            font-size: 1.4rem;
+            color: var(--white);
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        .badge {
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 5px 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-buttons {
+            margin-top: 30px;
+        }
+
+        .btn-gold, .main-btn {
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 15px 35px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            margin-right: 10px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--white);
+            padding: 13px 33px;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        .main-btn:hover { 
+            background: var(--gold-hover); 
+            transform: scale(1.05); 
+        }
+
+        /* Navbar */
+        #navbar {
+            background: var(--navy-dark);
+            padding: 20px 0;
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo { 
+            font-family: 'Cinzel', serif; 
+            color: var(--white); 
+            font-size: 1.5rem; 
+        }
+        
+        .logo span { 
+            color: var(--gold); 
+        }
+
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover { 
+            color: var(--gold); 
+        }
+
+        /* Grid e Seções */
+        .container { 
+            max-width: 1200px; 
+            margin: auto; 
+            padding: 0 20px; 
+        }
+        
+        .section-padding { 
+            padding: 100px 0; 
+        }
+        
+        .grid-2 { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 50px; 
+            align-items: center; 
+        }
+
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.8rem; 
+            margin-bottom: 25px; 
+        }
+        
+        .gold-text { 
+            color: var(--gold); 
+        }
+        
+        .center { 
+            text-align: center; 
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 20px 20px 0px var(--gold);
+        }
+
+        .juridico-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .juridico-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Tabelas */
+        .dark-section { 
+            background: var(--navy-dark); 
+            color: var(--white); 
+            padding: 80px 0; 
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 30px; 
+            background: rgba(255,255,255,0.05); 
+        }
+        
+        th { 
+            background: var(--gold); 
+            color: var(--navy-dark); 
+            padding: 20px; 
+            text-align: left; 
+        }
+        
+        td { 
+            padding: 18px; 
+            border-bottom: 1px solid #2d3436; 
+        }
+
+        .low { color: #ff6b6b; }
+        .mid { color: #feca57; }
+        .high { color: #48dbfb; }
+        .ultra { color: var(--gold); }
+
+        /* Stats */
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+        
+        .stat-card { 
+            padding: 40px; 
+            border: 1px solid #ddd; 
+            transition: var(--transition); 
+        }
+        
+        .stat-card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--gold); 
+        }
+        
+        .number { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: var(--navy-dark); 
+            display: block; 
+            margin: 10px 0; 
+        }
+
+        .icon { 
+            font-size: 3rem; 
+        }
+
+        .stat-card.highlight {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .stat-card.highlight .number {
+            color: var(--gold);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy-dark), var(--navy-light));
+            padding: 80px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn-group .main-btn.outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--white);
+        }
+
+        .btn-group .main-btn.outline:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        /* Modal */
+        .modal { 
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0,0,0,0.8); 
+        }
+        
+        .modal-content { 
+            background: var(--white); 
+            margin: 10% auto; 
+            padding: 40px; 
+            width: 50%; 
+            border-top: 5px solid var(--gold); 
+            border-radius: 4px;
+        }
+        
+        .close { 
+            float: right; 
+            font-size: 28px; 
+            cursor: pointer; 
+        }
+
+        /* Estilos para a Seção de Contato */
+        .contact-info {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(197, 160, 89, 0.05);
+            border-left: 4px solid var(--gold);
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--navy-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+        }
+
+        .form-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .form-message.success {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+
+        /* Ajuste para mobile */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .modal-content {
+                width: 90%;
+                margin: 20% auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <span class="badge">Carreiras de Estado</span>
+                <h1>Oficial de Cartório</h1>
+                <p>A Fé Pública e a Estabilidade das Relações Jurídicas no Brasil</p>
+                <div class="header-buttons">
+                    <a href="#sobre" class="btn-gold">Conhecer Carreira</a>
+                    <button onclick="abrirModal('concurso')" class="btn-gold btn-outline">Simular Concurso</button>
                 </div>
             </div>
-            <div class="contact-form">
-                <form id="contactForm" onsubmit="enviarMensagem(event)">
-                    <div class="form-group">
-                        <label for="nome">Nome completo *</label>
-                        <input type="text" id="nome" name="nome" required>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">PORTAL<span>JURÍDICO</span></div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#financas">Finanças</a></li>
+                <li><a href="#enem">ENEM & Ingresso</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="sobre" class="section-padding">
+            <div class="container">
+                <div class="grid-2">
+                    <div>
+                        <h2>A Nobreza da Função Notarial</h2>
+                        <p>O Oficial de Cartório é o guardião da verdade jurídica. Em 2026, sua atuação é o pilar da <strong>Extrajudicialização</strong>, permitindo que inventários, divórcios e usucapião sejam resolvidos com agilidade sem sobrecarregar o Judiciário.</p>
+                        <ul class="juridico-list">
+                            <li>Delegação do Poder Público (Art. 236 da CF/88)</li>
+                            <li>Independência Funcional e Fé Pública</li>
+                            <li>Responsabilidade Civil e Criminal</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="image-box">
+                        <img src="https://img.elo7.com.br/product/zoom/472B0FB/themis-deusa-justica-direito-estatua-enfeite-dourado-brilho-themis-resina.jpg" alt="Balança da Justiça e Direito">
                     </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem *</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-gold">Enviar Mensagem</button>
-                </form>
-                <div id="formMessage" class="form-message"></div>
+                </div>
             </div>
+        </section>
+
+        <section id="financas" class="dark-section">
+            <div class="container">
+                <h2 class="center gold-text">Projeção de Rendimentos 2026</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cargo / Referência</th>
+                                <th>Rendimento Mensal Estimado</th>
+                                <th>Comparativo Nacional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Média Salarial Brasileira</td>
+                                <td>R$ 3.540,00</td>
+                                <td class="low">Base</td>
+                            </tr>
+                            <tr>
+                                <td>Escrevente Substituto</td>
+                                <td>R$ 6.800,00</td>
+                                <td class="mid">2x Média</td>
+                            </tr>
+                            <tr>
+                                <td>Oficial (Entrância Inicial)</td>
+                                <td>R$ 22.400,00</td>
+                                <td class="high">6x Média</td>
+                            </tr>
+                            <tr>
+                                <td>Oficial (Entrância Final/Capital)</td>
+                                <td>R$ 115.000,00+</td>
+                                <td class="ultra">Topo da Pirâmide</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="enem" class="section-padding">
+            <div class="container center">
+                <h2>O Caminho da Aprovação</h2>
+                <p>O ingresso na carreira exige o Bacharelado em Direito. Confira as notas de corte atuais para as melhores faculdades do país:</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="icon">⚖️</div>
+                        <h3>Média ENEM (Sisu)</h3>
+                        <p class="number">758</p>
+                        <span>Nota Mínima Recomendada</span>
+                    </div>
+                    <div class="stat-card highlight">
+                        <div class="icon">🏛️</div>
+                        <h3>Top Universidades</h3>
+                        <p class="number">815</p>
+                        <span>USP, UFRJ, UFMG</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">📚</div>
+                        <h3>Anos de Estudo</h3>
+                        <p class="number">3-5</p>
+                        <span>Foco em Concursos Públicos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ferramentas" class="cta-section">
+            <div class="container center">
+                <h2 class="gold-text">Painel de Controle do Candidato</h2>
+                <div class="btn-group">
+                    <button onclick="calcularEmolumentos()" class="main-btn">Calculadora de Emolumentos</button>
+                    <button onclick="abrirModal('vagas')" class="main-btn">Vagas Abertas (CNS)</button>
+                    <button onclick="window.location.href='https://www.cnj.jus.br'" class="main-btn outline">Acesso ao CNJ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="section-padding">
+            <div class="container">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="gold-text">Fale Conosco</h2>
+                        <p>Tire suas dúvidas sobre a carreira de Oficial de Cartório, peça mais informações ou envie sugestões para o portal.</p>
+                        <div class="contact-info">
+                            <p><strong>📧 Email:</strong> contato@portaljuridico.com</p>
+                            <p><strong>📞 Telefone:</strong> (11) 1234-5678</p>
+                            <p><strong>🕒 Horário de Atendimento:</strong> Seg a Sex, 9h às 18h</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm" onsubmit="enviarMensagem(event)">
+                            <div class="form-group">
+                                <label for="nome">Nome completo *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-gold">Enviar Mensagem</button>
+                        </form>
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Observatório do Direito Notarial. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div id="modal-body"></div>
         </div>
     </div>
-</section>
+
+    <script>
+        // Função para abrir os modais e preencher com conteúdo dinâmico
+        function abrirModal(tipo) {
+            const modal = document.getElementById('modal');
+            const body = document.getElementById('modal-body');
+            modal.style.display = "block";
+
+            if(tipo === 'concurso') {
+                body.innerHTML = `
+                    <h2 style="color:#0a1128">Simulador de Probabilidade</h2>
+                    <p>Com base nos últimos concursos de Cartório:</p>
+                    <label>Quantas horas você estuda por dia?</label><br>
+                    <input type="number" id="horas" style="width:100%; padding:10px; margin:10px 0;">
+                    <button onclick="processarSimulacao()" class="btn-gold" style="width:100%;">Calcular Chance</button>
+                    <div id="resultadoSim"></div>
+                `;
+            } else if(tipo === 'vagas') {
+                body.innerHTML = `
+                    <h2>Editais Abertos 2026</h2>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="padding:10px; border-bottom:1px solid #eee;">🟢 TJ-SP: 154 Serventias (Inscrições Abertas)</li>
+                        <li style="padding:10px; border-bottom:1px solid #eee;">🟢 TJ-MG: 89 Serventias (Aguardando Edital)</li>
+                        <li style="padding:10px; border-bottom:1px solid #eee;">🟡 TJ-RJ: Concurso em Andamento</li>
+                    </ul>
+                `;
+            }
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+
+        function processarSimulacao() {
+            const h = document.getElementById('horas').value;
+            const res = document.getElementById('resultadoSim');
+            if(h > 6) {
+                res.innerHTML = "<h4 style='color:green; margin-top:20px;'>Probabilidade Alta! Você está no caminho da elite jurídica.</h4>";
+            } else {
+                res.innerHTML = "<h4 style='color:orange; margin-top:20px;'>Foco necessário. A concorrência para titular exige média de 8h/dia.</h4>";
+            }
+        }
+
+        function calcularEmolumentos() {
+            const valor = prompt("Digite o valor do imóvel para simular a escritura (R$):");
+            if(valor) {
+                const taxa = (valor * 0.005).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                alert(`O valor estimado de emolumentos para este ato é de aproximadamente ${taxa}. (Nota: Varia por estado)`);
+            }
+        }
+
+        // Função para enviar mensagem do formulário de contato
+        function enviarMensagem(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const formMessage = document.getElementById('formMessage');
+            
+            // Validação simples
+            if (!nome || !email || !mensagem) {
+                mostrarMensagem('Por favor, preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            // Validação de email simples
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                mostrarMensagem('Por favor, insira um e-mail válido.', 'error');
+                return;
+            }
+            
+            // Simulação de envio (em um projeto real, você enviaria para um backend)
+            console.log('Mensagem enviada:', { nome, email, mensagem });
+            
+            // Mostra mensagem de sucesso
+            mostrarMensagem('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+            
+            // Limpa o formulário
+            document.getElementById('contactForm').reset();
+        }
+
+        function mostrarMensagem(texto, tipo) {
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = texto;
+            formMessage.className = 'form-message ' + tipo;
+            
+            // Remove a mensagem após 5 segundos
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        // Fechar modal ao clicar fora dele
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) fecharModal();
+        }
+    </script>
+</body>
+</html>
