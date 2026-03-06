@@ -1,98 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficial de Cartório | Excelência Jurídica</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <div id="loader"></div>
-
-    <header class="main-header">
-        <div class="hero-overlay">
-            <div class="hero-text">
-                <span class="badge">Carreiras de Estado</span>
-                <h1>Oficial de Cartório</h1>
-                <p>A Fé Pública e a Estabilidade das Relações Jurídicas no Brasil</p>
-                <div class="header-buttons">
-                    <a href="#sobre" class="btn-gold">Conhecer Carreira</a>
-                    <button onclick="abrirModal('concurso')" class="btn-outline">Simular Concurso</button>
+<!-- Seção de Contato -->
+<section id="contato" class="section-padding">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal-left">
+                <h2 class="gold-text">Fale Conosco</h2>
+                <p>Tire suas dúvidas sobre a carreira de Oficial de Cartório, peça mais informações ou envie sugestões para o portal.</p>
+                <div class="contact-info">
+                    <p><strong>📧 Email:</strong> contato@portaljuridico.com</p>
+                    <p><strong>📞 Telefone:</strong> (11) 1234-5678</p>
+                    <p><strong>🕒 Horário de Atendimento:</strong> Seg a Sex, 9h às 18h</p>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">PORTAL<span>JURÍDICO</span></div>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#financas">Finanças</a></li>
-                <li><a href="#enem">ENEM</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <section id="sobre" class="section-padding">
-            <div class="container">
-                <div class="grid-2">
-                    <div class="reveal-left">
-                        <h2>A Nobreza da Função Notarial</h2>
-                        <p>O Oficial de Cartório é o guardião da verdade jurídica. Em 2026, sua atuação é o pilar da <strong>Extrajudicialização</strong>.</p>
-                        <ul class="juridico-list">
-                            <li>Delegação do Poder Público (Art. 236 da CF/88)</li>
-                            <li>Independência Funcional e Fé Pública</li>
-                        </ul>
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="enviarMensagem(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome" name="nome" required>
                     </div>
-                    <div class="image-box">
-                        <img src="https://img.elo7.com.br/product/zoom/472B0FB/themis-deusa-justica-direito-estatua-enfeite-dourado-brilho-themis-resina.jpg" alt="Justiça">
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold">Enviar Mensagem</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
             </div>
-        </section>
-
-        <section id="contato" class="section-padding" style="background: #f9f9f9;">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-text">
-                        <h2>Fale com o Especialista</h2>
-                        <p>Dúvidas sobre o ingresso na carreira ou legislação notarial? Envie sua mensagem abaixo.</p>
-                    </div>
-                    <form class="contact-form" onsubmit="event.preventDefault()">
-                        <div class="form-group">
-                            <input type="text" placeholder="Seu Nome Completo" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Seu Melhor E-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Escreva sua dúvida jurídica aqui..." rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn-gold">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container center">
-            <p>&copy; 2026 Observatório do Direito Notarial. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal()">&times;</span>
-            <div id="modal-body"></div>
         </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+</section>

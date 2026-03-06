@@ -1,79 +1,76 @@
-:root {
-    --navy: #0a1128;
-    --gold: #d4af37;
-    --white: #ffffff;
-    --gray: #f4f4f4;
+/* Estilos para a Seção de Contato */
+.contact-info {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(197, 160, 89, 0.05);
+    border-left: 4px solid var(--gold);
 }
 
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--navy);
-    line-height: 1.6;
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1rem;
 }
 
-.container { width: 85%; max-width: 1200px; margin: auto; }
-.section-padding { padding: 80px 0; }
-.center { text-align: center; }
-
-/* Header & Nav */
-.main-header {
-    background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920') no-repeat center/cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    color: white;
+.contact-form {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.hero-overlay { background: rgba(10, 17, 40, 0.7); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; }
-h1 { font-family: 'Cinzel', serif; font-size: 4rem; margin: 0; }
-
-nav { background: var(--navy); padding: 20px 0; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; width: 85%; margin: auto; }
-.logo { color: white; font-family: 'Cinzel', serif; font-weight: bold; }
-.logo span { color: var(--gold); }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-
-/* Botões */
-.btn-gold { background: var(--gold); color: white; padding: 12px 30px; border: none; cursor: pointer; text-decoration: none; font-weight: bold; transition: 0.3s; }
-.btn-gold:hover { background: #b8860b; transform: translateY(-3px); }
-.btn-outline { background: transparent; border: 2px solid white; color: white; padding: 12px 30px; cursor: pointer; margin-left: 10px; }
-
-/* Grid e Imagens */
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.image-box img { width: 100%; border-radius: 8px; box-shadow: 20px 20px 0 var(--gold); }
-
-/* SEÇÃO DE CONTATO (A que você pediu) */
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 40px;
-    background: white;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+.form-group {
+    margin-bottom: 25px;
 }
 
-.contact-text h2 { font-family: 'Cinzel', serif; color: var(--navy); }
-.contact-form { display: flex; flex-direction: column; gap: 15px; }
-.contact-form input, .contact-form textarea {
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--navy-dark);
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
+    transition: var(--transition);
 }
 
-/* Modal Básico */
-.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
-.modal-content { background: white; margin: 10% auto; padding: 40px; width: 50%; border-radius: 10px; position: relative; }
-.close { position: absolute; right: 20px; top: 10px; font-size: 2rem; cursor: pointer; }
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+}
 
-footer { background: var(--navy); color: white; padding: 30px 0; margin-top: 50px; }
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    display: none;
+}
 
-/* Responsividade */
+.form-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Ajuste para mobile */
 @media (max-width: 768px) {
-    .grid-2, .contact-wrapper { grid-template-columns: 1fr; }
-    h1 { font-size: 2.5rem; }
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
