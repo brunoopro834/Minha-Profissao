@@ -19,7 +19,7 @@
                 <p>A Fé Pública e a Estabilidade das Relações Jurídicas no Brasil</p>
                 <div class="header-buttons">
                     <a href="#sobre" class="btn-gold">Conhecer Carreira</a>
-                    <button onclick="abrirModal('concurso')" class=".-outline">Simular Concurso</button>
+                    <button onclick="abrirModal('concurso')" class="btn-outline">Simular Concurso</button>
                 </div>
             </div>
         </div>
@@ -31,8 +31,8 @@
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#financas">Finanças</a></li>
-                <li><a href="#enem">ENEM & Ingresso</a></li>
-                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#enem">ENEM</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
     </nav>
@@ -43,100 +43,45 @@
                 <div class="grid-2">
                     <div class="reveal-left">
                         <h2>A Nobreza da Função Notarial</h2>
-                        <p>O Oficial de Cartório é o guardião da verdade jurídica. Em 2026, sua atuação é o pilar da <strong>Extrajudicialização</strong>, permitindo que inventários, divórcios e usucapião sejam resolvidos com agilidade sem sobrecarregar o Judiciário.</p>
+                        <p>O Oficial de Cartório é o guardião da verdade jurídica. Em 2026, sua atuação é o pilar da <strong>Extrajudicialização</strong>.</p>
                         <ul class="juridico-list">
                             <li>Delegação do Poder Público (Art. 236 da CF/88)</li>
                             <li>Independência Funcional e Fé Pública</li>
-                            <li>Responsabilidade Civil e Criminal</li>
                         </ul>
                     </div>
                     <div class="image-box">
-                        <img src="https://img.elo7.com.br/product/zoom/472B0FB/themis-deusa-justica-direito-estatua-enfeite-dourado-brilho-themis-resina.jpg" alt="Balança da Justiça e Direito">
+                        <img src="https://img.elo7.com.br/product/zoom/472B0FB/themis-deusa-justica-direito-estatua-enfeite-dourado-brilho-themis-resina.jpg" alt="Justiça">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="financas" class="dark-section">
+        <section id="contato" class="section-padding" style="background: #f9f9f9;">
             <div class="container">
-                <h2 class="center gold-text">Projeção de Rendimentos 2026</h2>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Cargo / Referência</th>
-                                <th>Rendimento Mensal Estimado</th>
-                                <th>Comparativo Nacional</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Média Salarial Brasileira</td>
-                                <td>R$ 3.540,00</td>
-                                <td class="low">Base</td>
-                            </tr>
-                            <tr>
-                                <td>Escrevente Substituto</td>
-                                <td>R$ 6.800,00</td>
-                                <td class="mid">2x Média</td>
-                            </tr>
-                            <tr>
-                                <td>Oficial (Entrância Inicial)</td>
-                                <td>R$ 22.400,00</td>
-                                <td class="high">6x Média</td>
-                            </tr>
-                            <tr>
-                                <td>Oficial (Entrância Final/Capital)</td>
-                                <td>R$ 115.000,00+</td>
-                                <td class="ultra">Topo da Pirâmide</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="enem" class="section-padding">
-            <div class="container center">
-                <h2>O Caminho da Aprovação</h2>
-                <p>O ingresso na carreira exige o Bacharelado em Direito. Confira as notas de corte atuais para as melhores faculdades do país:</p>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="icon">⚖️</div>
-                        <h3>Média ENEM (Sisu)</h3>
-                        <p class="number">758</p>
-                        <span>Nota Mínima Recomendada</span>
+                <div class="contact-wrapper">
+                    <div class="contact-text">
+                        <h2>Fale com o Especialista</h2>
+                        <p>Dúvidas sobre o ingresso na carreira ou legislação notarial? Envie sua mensagem abaixo.</p>
                     </div>
-                    <div class="stat-card highlight">
-                        <div class="icon">🏛️</div>
-                        <h3>Top Universidades</h3>
-                        <p class="number">815</p>
-                        <span>USP, UFRJ, UFMG</span>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon">📚</div>
-                        <h3>Anos de Estudo</h3>
-                        <p class="number">3-5</p>
-                        <span>Foco em Concursos Públicos</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="ferramentas" class="cta-section">
-            <div class="container center">
-                <h2 class="gold-text">Painel de Controle do Candidato</h2>
-                <div class="btn-group">
-                    <button onclick="calcularEmolumentos()" class="main-btn">Calculadora de Emolumentos</button>
-                    <button onclick="abrirModal('vagas')" class="main-btn">Vagas Abertas (CNS)</button>
-                    <button onclick="window.location.href='https://www.cnj.jus.br'" class="main-btn outline">Acesso ao CNJ</button>
+                    <form class="contact-form" onsubmit="event.preventDefault()">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu Nome Completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu Melhor E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Escreva sua dúvida jurídica aqui..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold">Enviar Mensagem</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="container center">
             <p>&copy; 2026 Observatório do Direito Notarial. Todos os direitos reservados.</p>
         </div>
     </footer>
